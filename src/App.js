@@ -13,10 +13,11 @@ function App() {
    <a href="contatos.html" target="_blank">CONTATOS</a>
 </div>
 </nav><br></br>
-      <div class= "image"><img src = "sublaime_logotipo_fundo_transparente.png" /></div>
+      <div class= "image"><img src = "sublaime_logotipo_fundo_transparente.png" alt="Logotipo da Sublime"/></div>
       </header>
     </div>
   );
 }
+
 
 export default App;
