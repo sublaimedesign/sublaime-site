@@ -1,4 +1,4 @@
-
+import  './background-2.gif';
 import './App.css';
 
 function App() {
