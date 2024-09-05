@@ -1,5 +1,0 @@
-[build]
-base = "."
-command = "npm run build"
-publish = "./build"
-files = ["src/background-2.gif"]
