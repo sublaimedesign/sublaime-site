@@ -1,0 +1,160 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: show; /* Garante que não haja rolagem desnecessária */
+  background-image: url('background-2.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
+}
+
+.App-header {
+  flex: 1; /* Faz com que o .App-header ocupe o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Ajusta para alinhar ao topo */
+  font-size: calc(10px + 2vmin);
+  color: whitesmoke;
+  min-height: 100vh; /* Garante que a altura seja sempre 100% da tela */
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  align-items: flex-start; /* Alinha os botões ao topo */
+  height: 10%; /* Faz a sidebar ocupar 10% da altura */
+  background-color: transparent; /* Mantém o fundo transparente */
+}
+
+.sidebar a {
+  display: inline-block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  margin: 0 10px; /* Espaçamento entre os botões */
+}
+
+.sidebar a.active {
+  background-color: #3e84e0;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: orangered;
+  color: white;
+}
+
+.content {
+  padding: 1px 16px;
+  height: 100px; /* Ajuste conforme necessário */
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  .sidebar a {
+    margin: 10px 0; /* Espaçamento vertical entre os botões */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    text-align: center; /* Centraliza o texto */
+  }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image img {
+  max-width: 64.3%;
+  height: auto;
+}
+
+#slides {
+  display: flexbox; /* Verifique se isso é intencional */
+  width: 70%; /* Reduz a largura para metade */
+  height: 70%; /* Reduz a altura para metade */
+  background: transparent;
+  margin: 0 auto; /* Centraliza o contêiner dos slides */
+}
+
+#slides img {
+  width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+  height: 100%; /* Mantém a proporção da imagem */
+}
+
+
+#slides .slidesjs-navigation {
+  margin-top: 3px;
+}
+
+#slides .slidesjs-previous {
+  margin-right: 5px;
+  float: left;
+}
+
+#slides .slidesjs-next {
+  margin-right: 5px;
+  float: left;
+}
+
+.slidesjs-pagination {
+  margin: 6px 0 0;
+  float: right;
+  list-style: none;
+}
+
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/139719/pagination.png");
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+  background-position: 0 -13px;
+}
+
+.slidesjs-pagination li a:hover {
+  background-position: 0 -26px;
+}
+
+#slides a:link,
+#slides a:visited {
+  color: yellow;
+}
+
+#slides a:hover,
+#slides a:active {
+  color: #9e2020;
+}
+
+.navbar {
+  overflow: hidden;
+}

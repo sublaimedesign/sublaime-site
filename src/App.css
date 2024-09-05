@@ -1,0 +1,80 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Evitar rolagem desnecessária */
+}
+
+.App-header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: url('background-2.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  align-items: center; /* Centraliza os botões verticalmente */
+  height: 100%; /* Faz a sidebar ocupar toda a altura */
+  background-color: transparent; /* Mantém o fundo transparente */
+}
+
+.sidebar a {
+  display: inline-block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  margin: 0 10px; /* Espaçamento entre os botões */
+}
+
+.sidebar a.active {
+  background-color: #3e84e0;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: orangered;
+  color: white;
+}
+
+.content {
+  padding: 1px 16px;
+  height: 500px; /* Ajuste conforme necessário */
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  .sidebar a {
+    margin: 10px 0; /* Espaçamento vertical entre os botões */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    text-align: center; /* Centraliza o texto */
+  }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image img {
+  max-width: 64.3%;
+  height: auto;
+}
