@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
   overflow: hidden; /* Garante que não haja rolagem desnecessária */
-  background-image: url('background-2.gif');
+  background-image: url('bubbles-2.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
