@@ -13,7 +13,7 @@ html, body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  background-image: url('/public/js/bubbles-2.gif');
+  background-image: url('/public/js/bubbles-1.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -29,10 +29,11 @@ html, body {
 
 .sidebar a {
   display: inline-block;
-  color: white;
+  color: black;
   padding: 16px;
   text-decoration: none;
   margin: 0 10px; /* Espaçamento entre os botões */
+
 }
 
 .sidebar a.active {
@@ -43,6 +44,8 @@ html, body {
 .sidebar a:hover:not(.active) {
   background-color: orangered;
   color: white;
+  transform: scale(1.1);
+  transition: all 0.7s ease;
 }
 
 .content {
