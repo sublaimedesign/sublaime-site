@@ -3,17 +3,12 @@ html, body {
   padding: 0;
   height: 100%;
   overflow: show; /* Garante que não haja rolagem desnecessária */
-  background-image: url('bubbles-2.gif');
+  background-image: url('bubbles-1.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-body {
-  font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
-}
 
 .App-header {
   flex: 1; /* Faz com que o .App-header ocupe o espaço disponível */
@@ -28,6 +23,7 @@ body {
 
 .sidebar {
   display: flex;
+  font-size: x-large;
   justify-content: center; /* Centraliza os botões horizontalmente */
   align-items: flex-start; /* Alinha os botões ao topo */
   height: 10%; /* Faz a sidebar ocupar 10% da altura */
@@ -36,7 +32,7 @@ body {
 
 .sidebar a {
   display: inline-block;
-  color: white;
+  color: black;
   padding: 16px;
   text-decoration: none;
   margin: 0 10px; /* Espaçamento entre os botões */
@@ -50,6 +46,8 @@ body {
 .sidebar a:hover:not(.active) {
   background-color: orangered;
   color: white;
+   transform: scale(1.1);
+  transition: all 0.7s ease;
 }
 
 .content {
